@@ -1,0 +1,19 @@
+{
+    "repositories": [
+        {
+            "name": "evcodeshift",
+            "rootdirname": "evcodeshift",
+            "repo": "https://github.com/ElonVolo/evcodeshift.git"
+        },
+        {
+            "name": "ast-types",
+            "rootdirname": "ast-types",
+            "repo": "https://github.com/ElonVolo/ast-types.git"
+        },
+        {
+            "name": "recast",
+            "rootdirname": "recast",
+            "repo": "https://github.com/ElonVolo/recast.git"
+        }
+    ]
+}
