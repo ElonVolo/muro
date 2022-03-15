@@ -1,6 +1,7 @@
 import simpleGit, {
     SimpleGitOptions,
-    SimpleGit
+    SimpleGit,
+    GitError
 } from 'simple-git';
 
 
@@ -15,12 +16,13 @@ module.exports = toolbox => {
             print.info(`Cloning ${repoPath}...\n`);
             const git: SimpleGit = simpleGit();
 
-            try {
-                await git.clone(repoPath);
-            } catch (e) {
-                print.console.error(`Repository at ${repoPath} could not be cloned due to an error:`);
-                print.console.error(e);
-            }
+            git.clone(repoPath, {}, (err:GitError, data:string) => {
+                if (err) {
+                    print.error(err);
+                } else {
+                    print.info(data);
+                }
+            })
         },
 
         update: async (repoInfo) => {
