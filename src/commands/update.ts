@@ -10,7 +10,12 @@ const command: GluegunCommand = {
         let configJson = filesystem.read(configPath, 'json');
 
         for (let repoInfo of configJson['repositories']) {
-            git.update(repoInfo.repo);
+            let statusResult = git.checkStatus(repoInfo);
+            if (!statusResult) {
+                print.error(`${repoInfo['name']} has changes that need to be committed`);
+            } else {
+                git.update(repoInfo.repo);
+            }         
         }
     },
 }
