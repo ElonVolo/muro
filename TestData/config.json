@@ -1,0 +1,75 @@
+{
+    "repositories": [
+        {
+            "name": "evcodeshift",
+            "rootdirname": "evcodeshift",
+            "repo": "https://github.com/ElonVolo/evcodeshift.git",
+            "cloneActions": [
+                {
+                    "type": "command",
+                    "command": "npm",
+                    "args": [
+                        "install"
+                    ]
+                }
+
+            ],
+            "updateActions": [
+                {
+                    "type": "command",
+                    "command": "npm",
+                    "args": [
+                        "install"
+                    ]
+                }
+
+            ]
+        },
+        {
+            "name": "ast-types",
+            "rootdirname": "ast-types",
+            "repo": "https://github.com/ElonVolo/ast-types.git",
+            "cloneActions": [
+                {
+                    "type": "command",
+                    "command": "npm",
+                    "args": [
+                        "install"
+                    ]
+                }
+            ],
+            "updateActions": [
+                {
+                    "type": "command",
+                    "command": "npm",
+                    "args": [
+                        "install"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "recast",
+            "rootdirname": "recast",
+            "repo": "https://github.com/ElonVolo/recast.git",
+            "cloneActions": [
+                {
+                    "type": "command",
+                    "command": "npm",
+                    "args": [
+                        "install"
+                    ]
+                }
+            ],
+            "updateActions": [
+                {
+                    "type": "command",
+                    "command": "npm",
+                    "args": [
+                        "install"
+                    ]
+                }
+            ]
+        }
+    ]
+}
